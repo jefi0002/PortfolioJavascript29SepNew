@@ -1,9 +1,9 @@
 console.log("script loaded");
 
-//Opgave 1
+// Opgave 1
 const grades = [40, 50, 60, 66, 71, 78, 81, 91];
 
-console.log(grades);
+console.log(grades.length);
 
 grades.forEach(grade => {
     let gradescore;
@@ -20,9 +20,7 @@ grades.forEach(grade => {
         gradescore = "F";
     }
 
-
     console.log(`${grade}: ${gradescore}`);
-
 });
 
 let sum = 0;
@@ -30,8 +28,7 @@ grades.forEach(grade => {
     sum += grade;
 });
 
-
-const avg =(sum/grades.length)
+const avg = (sum / grades.length);
 
 if (avg < 60) {
     console.log("Overall Class Performance: Needs Improvement");
@@ -44,24 +41,23 @@ if (avg < 60) {
 }
 
 let largest = grades[0];
-
 for (let i = 1; i < grades.length; i++) {
     if (grades[i] > largest) {
         largest = grades[i];
     }
 }
 
-let gradescore;
+let largestGradeScore;
 if (largest >= 90) {
-    gradescore = "A";
+    largestGradeScore = "A";
 } else if (largest >= 80) {
-    gradescore = "B";
+    largestGradeScore = "B";
 } else if (largest >= 70) {
-    gradescore = "C";
+    largestGradeScore = "C";
 } else if (largest >= 60) {
-    gradescore = "D";
+    largestGradeScore = "D";
 } else {
-    gradescore = "F";
+    largestGradeScore = "F";
 }
 
 let smallest = grades[0];
@@ -71,31 +67,28 @@ for (let i = 1; i < grades.length; i++) {
     }
 }
 
-let gradescoreSmallest;
+let smallestGradeScore;
 if (smallest >= 90) {
-    gradescoreSmallest = "A";
+    smallestGradeScore = "A";
 } else if (smallest >= 80) {
-    gradescoreSmallest = "B";
+    smallestGradeScore = "B";
 } else if (smallest >= 70) {
-    gradescoreSmallest = "C";
+    smallestGradeScore = "C";
 } else if (smallest >= 60) {
-    gradescoreSmallest = "D";
+    smallestGradeScore = "D";
 } else {
-    gradescoreSmallest = "F";
+    smallestGradeScore = "F";
 }
-console.log(`Highest Grade: ${largest} (${gradescore})`);
 
-console.log(`Smallest Grade: ${smallest} (${gradescoreSmallest})`);
-
-console.log("Average Grade:(",avg,")");
-
+console.log(`Highest Grade: ${largest} (${largestGradeScore})`);
+console.log(`Smallest Grade: ${smallest} (${smallestGradeScore})`);
+console.log(`Average Grade: (${avg.toFixed(2)})`);
 
 // Opgave 2
 console.log('');
 
 const island = ['-', '-', '-', 'T', '-', '-'];
-
-console.log('There are', island.length, 'moves on this island ')
+console.log('There are', island.length, 'moves on this island');
 
 island.forEach((move, index) => {
     if (move === 'T') {
@@ -106,18 +99,16 @@ island.forEach((move, index) => {
 });
 
 let treasureNumber = 0;
-
 island.forEach((move, index) => {
     if (move === 'T') {
         console.log(`Treasure found at move ${index + 1}`);
         treasureNumber++;
     } else {
-        console.log(`No treasure found :(`);
+        console.log('No treasure found :(');
     }
 });
 
-
-console.log(`There were ${treasureNumber} treasures in the island`);
+console.log(`There were ${treasureNumber} treasures on the island`);
 
 // Opgave 3
 console.log('');
